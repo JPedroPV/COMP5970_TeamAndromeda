@@ -5,6 +5,7 @@ import { UserType } from '../user/user-type';
 import { User } from '../user/user';
 import { Member } from '../user/member';
 import { SmallBookViewComponent } from '../book/small-book-view/small-book-view.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @Component({
   selector: 'app-purchase-history',
@@ -12,7 +13,9 @@ import { SmallBookViewComponent } from '../book/small-book-view/small-book-view.
   styleUrl: './purchase-history.component.css',
   standalone: true,
   imports: [
-    SmallBookViewComponent
+    SmallBookViewComponent,
+    MatGridListModule
+
   ]
 })
 export class PurchaseHistoryComponent {

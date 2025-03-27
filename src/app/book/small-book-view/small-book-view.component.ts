@@ -2,11 +2,22 @@ import { Component, Input } from '@angular/core';
 import { Book } from '../book';
 import { BookType } from '../book-type';
 import { CurrentUserService } from '../../current-user.service';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardContent, MatCardSubtitle, MatCardTitle } from '@angular/material/card';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-small-book-view',
   templateUrl: './small-book-view.component.html',
-  styleUrl: './small-book-view.component.css'
+  styleUrl: './small-book-view.component.css',
+  standalone: true,
+  imports: [
+    MatGridListModule,
+    MatCardContent,
+    MatIcon,
+    MatCardSubtitle,
+    MatCardTitle
+  ]
 })
 export class SmallBookViewComponent {
   @Input() book!: Book;

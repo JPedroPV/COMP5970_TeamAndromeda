@@ -5,11 +5,16 @@ import { UserType } from '../../../user/user-type';
 import { Member } from '../../../user/member';
 import { User } from '../../../user/user';
 import { Customer } from '../../../user/customer';
+import { MatCheckbox } from '@angular/material/checkbox';
 
 @Component({
   selector: 'app-checkout-confirm',
   templateUrl: './checkout-confirm.component.html',
-  styleUrl: './checkout-confirm.component.css'
+  styleUrl: './checkout-confirm.component.css',
+  standalone: true,
+  imports: [
+    MatCheckbox
+  ]
 })
 export class CheckoutConfirmComponent {
   customer: any = this.curUser.user;

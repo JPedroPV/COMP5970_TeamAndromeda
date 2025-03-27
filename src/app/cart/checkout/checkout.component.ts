@@ -4,11 +4,18 @@ import { CurrentUserService } from '../../current-user.service';
 import { MatDialog } from '@angular/material/dialog';
 import { CheckoutConfirmComponent } from './checkout-confirm/checkout-confirm.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { SmallBookViewComponent } from '../../book/small-book-view/small-book-view.component';
 
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
-  styleUrl: './checkout.component.css'
+  styleUrl: './checkout.component.css',
+  standalone: true,
+  imports: [
+    MatGridListModule,
+    SmallBookViewComponent
+  ]
 })
 export class CheckoutComponent {
   books: Book[] = [];
