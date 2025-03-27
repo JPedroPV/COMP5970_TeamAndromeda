@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { SearchBarComponent } from './top-bar/search-bar/search-bar.component';
 import { BookSearchComponent } from './book-search/book-search.component';
@@ -17,7 +18,7 @@ import { PurchaseHistoryComponent } from './purchase-history/purchase-history.co
   styleUrls: ['./app.component.css'],
   standalone: true,
   imports: [
-    AppComponent,
+    RouterModule,
     TopBarComponent,
     SearchBarComponent,
     AboutUsComponent,

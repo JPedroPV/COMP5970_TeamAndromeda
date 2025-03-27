@@ -3,11 +3,21 @@ import { ActivatedRoute } from '@angular/router';
 import { Book } from '../book/book';
 import { BooksService } from '../book/books.service';
 import { Router, NavigationEnd } from '@angular/router';
+import { MatGridList, MatGridTile } from '@angular/material/grid-list';
+import { SmallBookViewComponent } from '../book/small-book-view/small-book-view.component';
+import { MatDivider } from '@angular/material/divider';
 
 @Component({
   selector: 'app-book-search',
   templateUrl: './book-search.component.html',
-  styleUrl: './book-search.component.css'
+  styleUrl: './book-search.component.css',
+  standalone: true,
+  imports: [
+    MatGridTile,
+    MatGridList,
+    SmallBookViewComponent,
+    MatDivider
+  ]
 })
 export class BookSearchComponent {
   private searchParams: string;

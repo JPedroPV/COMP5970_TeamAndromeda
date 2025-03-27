@@ -6,6 +6,7 @@ import { CurrentUserService } from '../current-user.service';
 import { UserType } from '../user/user-type';
 import { Member } from '../user/member';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-top-bar',
@@ -13,7 +14,9 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
   styleUrls: ['./top-bar.component.css'],
   standalone: true,
   imports: [
-    SearchBarComponent
+    SearchBarComponent,
+    LoginComponent,
+    RouterModule
   ]
 })
 
