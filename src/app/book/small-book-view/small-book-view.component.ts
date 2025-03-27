@@ -3,7 +3,7 @@ import { Book } from '../book';
 import { BookType } from '../book-type';
 import { CurrentUserService } from '../../current-user.service';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { MatCardContent, MatCardSubtitle, MatCardTitle } from '@angular/material/card';
+import { MatCard, MatCardContent, MatCardHeader, MatCardSubtitle, MatCardTitle } from '@angular/material/card';
 import { MatIcon } from '@angular/material/icon';
 
 @Component({
@@ -16,7 +16,9 @@ import { MatIcon } from '@angular/material/icon';
     MatCardContent,
     MatIcon,
     MatCardSubtitle,
-    MatCardTitle
+    MatCardTitle,
+    MatCard,
+    MatCardHeader
   ]
 })
 export class SmallBookViewComponent {

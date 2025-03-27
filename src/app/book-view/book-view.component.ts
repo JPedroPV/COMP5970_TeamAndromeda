@@ -3,11 +3,18 @@ import { BooksService } from '../book/books.service';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { CurrentUserService } from '../current-user.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDivider } from '@angular/material/divider';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-book-view',
   templateUrl: './book-view.component.html',
-  styleUrl: './book-view.component.css'
+  styleUrl: './book-view.component.css',
+  standalone: true,
+  imports: [
+    MatDivider,
+    MatIcon
+  ]
 })
 export class BookViewComponent {
   book: any | undefined;
