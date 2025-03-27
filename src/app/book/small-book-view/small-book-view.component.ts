@@ -6,6 +6,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCard, MatCardContent, MatCardHeader, MatCardSubtitle, MatCardTitle } from '@angular/material/card';
 import { MatIcon } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-small-book-view',
@@ -20,7 +21,8 @@ import { RouterModule } from '@angular/router';
     MatCardTitle,
     MatCard,
     MatCardHeader,
-    RouterModule
+    RouterModule,
+    CommonModule
   ]
 })
 export class SmallBookViewComponent {

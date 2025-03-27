@@ -6,6 +6,7 @@ import { CheckoutConfirmComponent } from './checkout-confirm/checkout-confirm.co
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { SmallBookViewComponent } from '../../book/small-book-view/small-book-view.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-checkout',
@@ -14,7 +15,8 @@ import { SmallBookViewComponent } from '../../book/small-book-view/small-book-vi
   standalone: true,
   imports: [
     MatGridListModule,
-    SmallBookViewComponent
+    SmallBookViewComponent,
+    CommonModule
   ]
 })
 export class CheckoutComponent {

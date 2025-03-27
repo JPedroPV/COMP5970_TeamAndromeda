@@ -5,6 +5,7 @@ import { CurrentUserService } from '../current-user.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDivider } from '@angular/material/divider';
 import { MatIcon } from '@angular/material/icon';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-book-view',
@@ -13,7 +14,8 @@ import { MatIcon } from '@angular/material/icon';
   standalone: true,
   imports: [
     MatDivider,
-    MatIcon
+    MatIcon,
+    CommonModule
   ]
 })
 export class BookViewComponent {

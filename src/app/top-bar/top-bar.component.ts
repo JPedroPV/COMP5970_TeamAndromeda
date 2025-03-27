@@ -15,7 +15,6 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [
     SearchBarComponent,
-    LoginComponent,
     RouterModule
   ]
 })

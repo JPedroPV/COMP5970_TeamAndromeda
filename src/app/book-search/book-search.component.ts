@@ -6,6 +6,7 @@ import { Router, NavigationEnd } from '@angular/router';
 import { MatGridList, MatGridTile } from '@angular/material/grid-list';
 import { SmallBookViewComponent } from '../book/small-book-view/small-book-view.component';
 import { MatDivider } from '@angular/material/divider';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-book-search',
@@ -16,7 +17,7 @@ import { MatDivider } from '@angular/material/divider';
     MatGridTile,
     MatGridList,
     SmallBookViewComponent,
-    MatDivider
+    CommonModule
   ]
 })
 export class BookSearchComponent {
