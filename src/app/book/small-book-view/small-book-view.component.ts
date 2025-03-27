@@ -5,6 +5,7 @@ import { CurrentUserService } from '../../current-user.service';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCard, MatCardContent, MatCardHeader, MatCardSubtitle, MatCardTitle } from '@angular/material/card';
 import { MatIcon } from '@angular/material/icon';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-small-book-view',
@@ -18,7 +19,8 @@ import { MatIcon } from '@angular/material/icon';
     MatCardSubtitle,
     MatCardTitle,
     MatCard,
-    MatCardHeader
+    MatCardHeader,
+    RouterModule
   ]
 })
 export class SmallBookViewComponent {

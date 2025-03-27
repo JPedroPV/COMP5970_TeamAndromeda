@@ -6,6 +6,7 @@ import { Member } from '../../../user/member';
 import { User } from '../../../user/user';
 import { Customer } from '../../../user/customer';
 import { MatCheckbox } from '@angular/material/checkbox';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-checkout-confirm',
@@ -13,7 +14,8 @@ import { MatCheckbox } from '@angular/material/checkbox';
   styleUrl: './checkout-confirm.component.css',
   standalone: true,
   imports: [
-    MatCheckbox
+    MatCheckbox,
+    FormsModule
   ]
 })
 export class CheckoutConfirmComponent {
