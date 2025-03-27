@@ -5,11 +5,16 @@ import { LoginComponent } from './login/login.component';
 import { CurrentUserService } from '../current-user.service';
 import { UserType } from '../user/user-type';
 import { Member } from '../user/member';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 
 @Component({
   selector: 'app-top-bar',
   templateUrl: './top-bar.component.html',
-  styleUrls: ['./top-bar.component.css']
+  styleUrls: ['./top-bar.component.css'],
+  standalone: true,
+  imports: [
+    SearchBarComponent
+  ]
 })
 
 export class TopBarComponent {

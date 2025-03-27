@@ -48,8 +48,6 @@ import { PurchaseHistoryComponent } from './purchase-history/purchase-history.co
     MatFormFieldModule,
     FormsModule,
     MatCheckboxModule,
-  ],
-  declarations: [
     AppComponent,
     TopBarComponent,
     SearchBarComponent,
@@ -62,6 +60,8 @@ import { PurchaseHistoryComponent } from './purchase-history/purchase-history.co
     CheckoutConfirmComponent,
     LoginComponent,
     PurchaseHistoryComponent,
+  ],
+  declarations: [
   ],
   bootstrap: [
     AppComponent

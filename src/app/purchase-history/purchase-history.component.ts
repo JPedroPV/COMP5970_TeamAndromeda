@@ -4,11 +4,16 @@ import { CurrentUserService } from '../current-user.service';
 import { UserType } from '../user/user-type';
 import { User } from '../user/user';
 import { Member } from '../user/member';
+import { SmallBookViewComponent } from '../book/small-book-view/small-book-view.component';
 
 @Component({
   selector: 'app-purchase-history',
   templateUrl: './purchase-history.component.html',
-  styleUrl: './purchase-history.component.css'
+  styleUrl: './purchase-history.component.css',
+  standalone: true,
+  imports: [
+    SmallBookViewComponent
+  ]
 })
 export class PurchaseHistoryComponent {
   purchaseHistory: Cart[];
