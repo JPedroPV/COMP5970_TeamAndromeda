@@ -1,7 +1,7 @@
 <div class="yellowstripe"></div>
-<a [routerLink]="['/']">
+<button [routerLink]="['/']">
   <img src="assets/andromeda_banner_layer_1.png" alt="andromeda banner" style="height: 68px; position: absolute; top: 0px; left: -5%;">
-</a>
+</button>
 
 <button *ngIf="isMember()" routerLink="/purchase-history" class="button fancy-button" style="position: absolute; top: 14px; right: 212px;"><em class="material-icons">history</em>Purchase History</button>
 <button (click)="login()" class="button fancy-button" style="position: absolute; top: 14px; right: 108px;">
