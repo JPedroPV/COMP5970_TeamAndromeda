@@ -96,6 +96,9 @@
               "devServerTarget": "angular.ah24andromeda:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
