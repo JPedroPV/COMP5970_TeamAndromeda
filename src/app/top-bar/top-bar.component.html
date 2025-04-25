@@ -4,7 +4,9 @@
 </a>
 
 <a *ngIf="isMember()" routerLink="/purchase-history" class="button fancy-button" style="position: absolute; top: 14px; right: 212px;"><em class="material-icons">history</em>Purchase History</a>
-<a (click)="login()" class="button fancy-button" style="position: absolute; top: 14px; right: 108px;"><em class="material-icons">person</em>Login</a>
+<button (click)="login()" class="button fancy-button" style="position: absolute; top: 14px; right: 108px;">
+<em class="material-icons">person</em>Login
+</button>
 <a routerLink="/cart" class="button fancy-button" style="position: absolute; top: 14px; right: 14px;"><em class="material-icons">shopping_cart</em>Cart</a>
 
 <app-search-bar class="search-form" (searchEvent)="sendToSearch($event)">
