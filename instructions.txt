@@ -1,0 +1,11 @@
+To install packages:
+npm i
+
+To run the app locally:
+npm run start
+
+To update the version located on github pages with:
+ng build --output-path docs --base-href /COMP5970_TeamAndromeda/
+git add -A
+git commit -m "The name of your commit"
+git push origin main
