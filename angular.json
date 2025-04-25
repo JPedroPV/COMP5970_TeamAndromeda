@@ -100,7 +100,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "/"
+            "baseHref": "/COMP5970_TeamAndromeda/"
           }
         }
       }
