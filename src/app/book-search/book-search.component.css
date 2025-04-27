@@ -1,11 +1,20 @@
+mat-grid-list {
+    margin: 0 auto; /* Center the grid list horizontally */
+    width: auto;    /* Allow the grid to adjust its width dynamically */
+    padding: 16px;  /* Add padding around the grid */
+    display: flex;  /* Use flexbox for layout */
+    justify-content: center;
+}
+
 mat-grid-tile {
-    width: 100%;
-    max-width: 350px;
-    min-width: 350px;
-    height: 100%;
-    max-height:450px;
-    min-height: 450px;
-    padding: 50px;
-    margin: 100px;
-    padding-top: 0;
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Ensure text alignment is centered */
+    padding: 8px; /* Add padding to prevent sticking */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+}
+
+app-small-book-view {
+    margin: auto; /* Center the small-book-view component */
 }

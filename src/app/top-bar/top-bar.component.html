@@ -15,8 +15,11 @@
 
     <!-- Buttons -->
     <div class="col-auto text-end">
-      <button *ngIf="isMember()" routerLink="/purchase-history" class="btn btn-outline-primary me-2 mb-2 mb-md-0">
+      <button *ngIf="isMember()" routerLink="/purchase-history" class="rounded fancy-button" style="margin-right: 5px;">
         <em class="material-icons">history</em> Purchase History
+      </button>
+      <button (click)="login()" class="rounded fancy-button" style="margin-right: 5px;">
+        <em class="material-icons">person</em> Login
       </button>
       <button routerLink="/cart" class="rounded fancy-button">
         <em class="material-icons">shopping_cart</em> Cart

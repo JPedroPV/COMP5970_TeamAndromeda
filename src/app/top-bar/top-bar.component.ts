@@ -7,6 +7,7 @@ import { UserType } from '../user/user-type';
 import { Member } from '../user/member';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-top-bar',
@@ -15,7 +16,8 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [
     SearchBarComponent,
-    RouterModule
+    RouterModule,
+    CommonModule
   ]
 })
 

@@ -3,10 +3,11 @@ import { ActivatedRoute } from '@angular/router';
 import { Book } from '../book/book';
 import { BooksService } from '../book/books.service';
 import { Router, NavigationEnd } from '@angular/router';
-import { MatGridList, MatGridTile } from '@angular/material/grid-list';
+import { MatGridListModule, MatGridTile } from '@angular/material/grid-list';
 import { SmallBookViewComponent } from '../book/small-book-view/small-book-view.component';
 import { MatDivider } from '@angular/material/divider';
 import { CommonModule } from '@angular/common';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-book-search',
@@ -15,7 +16,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [
     MatGridTile,
-    MatGridList,
+    MatGridListModule,
     SmallBookViewComponent,
     CommonModule
   ]
@@ -23,11 +24,13 @@ import { CommonModule } from '@angular/common';
 export class BookSearchComponent {
   private searchParams: string;
   books: Book[];
+  gridCols: number = 3; // Default number of columns
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private booksService: BooksService,
+    private breakpointObserver: BreakpointObserver // Inject BreakpointObserver
   ) {
     this.searchParams = '';
     this.books = this.booksService.getBooks();
@@ -35,6 +38,27 @@ export class BookSearchComponent {
     this.router.events.subscribe((event) => {
       if(event instanceof NavigationEnd) {
         this.recalcsearch();
+      }
+    });
+
+    // Set up responsive grid columns
+    this.breakpointObserver.observe([
+      Breakpoints.XSmall, // For very small screens
+      Breakpoints.Small,  // For small screens
+      Breakpoints.Medium, // For medium screens
+      Breakpoints.Large,  // For large screens
+      Breakpoints.XLarge  // For extra-large screens
+    ]).subscribe(result => {
+      if (result.breakpoints[Breakpoints.XSmall]) {
+        this.gridCols = 1; // 1 column for extra small screens
+      } else if (result.breakpoints[Breakpoints.Small]) {
+        this.gridCols = 1; // 2 columns for small screens
+      } else if (result.breakpoints[Breakpoints.Medium]) {
+        this.gridCols = 2; // 3 columns for medium screens
+      } else if (result.breakpoints[Breakpoints.Large]) {
+        this.gridCols = 3; // 4 columns for large screens
+      } else if (result.breakpoints[Breakpoints.XLarge]) {
+        this.gridCols = 4; // 5 columns for extra-large screens
       }
     });
   }
