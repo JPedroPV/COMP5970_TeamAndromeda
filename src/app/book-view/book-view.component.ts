@@ -3,8 +3,8 @@ import { BooksService } from '../book/books.service';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { CurrentUserService } from '../current-user.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { MatDivider } from '@angular/material/divider';
-import { MatIcon } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -13,8 +13,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './book-view.component.css',
   standalone: true,
   imports: [
-    MatDivider,
-    MatIcon,
+    MatDividerModule,
+    MatIconModule,
     CommonModule
   ]
 })
