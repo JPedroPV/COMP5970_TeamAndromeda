@@ -1,12 +1,29 @@
 <div class="yellowstripe"></div>
-<button [routerLink]="['/']">
-  <img src="assets/andromeda_banner_layer_1.png" alt="andromeda banner" style="height: 68px; position: absolute; top: 0px; left: -5%;">
-</button>
+<div class="container-fluid">
+  <div class="row align-items-center flex-wrap">
+    <!-- Logo -->
+    <div class="col-auto mb-2 mb-md-0">
+      <a [routerLink]="['/']">
+        <img src="assets/andromeda_banner_layer_1.png" alt="andromeda banner" class="img-fluid" style="height: 68px;">
+      </a>
+    </div>
 
-<button *ngIf="isMember()" routerLink="/purchase-history" class="button fancy-button" style="position: absolute; top: 14px; right: 212px;"><em class="material-icons">history</em>Purchase History</button>
-<button (click)="login()" class="button fancy-button" style="position: absolute; top: 14px; right: 108px;">
-  <em class="material-icons">person</em>Login
-</button>
-<button routerLink="/cart" class="button fancy-button" style="position: absolute; top: 14px; right: 14px;"><em class="material-icons">shopping_cart</em>Cart</button>
+    <!-- Search Bar -->
+    <div class="col-12 col-md text-center text-md-start mb-2 mb-md-0">
+      <app-search-bar class="search-form" (searchEvent)="sendToSearch($event)"></app-search-bar>
+    </div>
 
-<app-search-bar class="search-form" (searchEvent)="sendToSearch($event)">
+    <!-- Buttons -->
+    <div class="col-auto text-end">
+      <button *ngIf="isMember()" routerLink="/purchase-history" class="rounded fancy-button" style="margin-right: 5px;">
+        <em class="material-icons">history</em> Purchase History
+      </button>
+      <button (click)="login()" class="rounded fancy-button" style="margin-right: 5px;">
+        <em class="material-icons">person</em> Login
+      </button>
+      <button routerLink="/cart" class="rounded fancy-button">
+        <em class="material-icons">shopping_cart</em> Cart
+      </button>
+    </div>
+  </div>
+</div>

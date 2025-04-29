@@ -63,9 +63,6 @@ import { PurchaseHistoryComponent } from './purchase-history/purchase-history.co
   ],
   declarations: [
   ],
-  bootstrap: [
-    AppComponent
-  ],
   providers: [
     provideAnimationsAsync()
   ]
