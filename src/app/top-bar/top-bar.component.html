@@ -1,6 +1,7 @@
+<header>
 <div class="yellowstripe"></div>
 <div class="container-fluid">
-  <div class="row align-items-center flex-wrap">
+  <div class="row align-items-center flex-wrap" style="margin: auto;">
     <!-- Logo -->
     <div class="col-auto mb-2 mb-md-0">
       <a [routerLink]="['/']">
@@ -9,12 +10,12 @@
     </div>
 
     <!-- Search Bar -->
-    <div class="col-12 col-md text-center text-md-start mb-2 mb-md-0">
+    <div class="col-12 col-md text-center text-md-start mb-2 mb-md-0" style="padding-bottom: 10px">
       <app-search-bar class="search-form" (searchEvent)="sendToSearch($event)"></app-search-bar>
     </div>
 
     <!-- Buttons -->
-    <div class="col-auto text-end">
+    <div class="col-auto text-end" style="margin: auto;">
       <button *ngIf="isMember()" routerLink="/purchase-history" class="rounded fancy-button" style="margin-right: 5px;">
         <em class="material-icons">history</em> Purchase History
       </button>
@@ -27,3 +28,4 @@
     </div>
   </div>
 </div>
+</header>
