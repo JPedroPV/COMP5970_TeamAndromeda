@@ -40,6 +40,9 @@ Bootstrap or GitHub Pages, then we will just use a vanilla JavaScript HTML app.
 Bootstrap will provide premade buttons, forms, and a grid system for adapting to different screen sizes, which will be crucial when it comes 
 to make an app that works for mobile devices.
 
+#### How to run locally
+It's recommended that this is run through something like WSL and would require the use of node package manager (npm). After cloning the repo/unzipping the file, within the main directory where this README is, run 'npm i' to install all dependencies, then 'npm run start' to run it locally. If you struggle with this, you can see the most up to date version of this project on the website link given above.
+
 ## Internal Representation of Each Book:
 | **Column Name** | **Data Type** | **Description** |
 |-----------------|---------------|-----------------|
